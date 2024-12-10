@@ -122,7 +122,6 @@ Resources:
           set -ex
           yum update -y && yum install git nodejs -y
           git clone https://github.com/nsteck17/aws-demo.git
-          cd Demo
           npm i
           npm i pm2 -g
           npx prisma migrate reset --force && npx prisma migrate dev --name init
