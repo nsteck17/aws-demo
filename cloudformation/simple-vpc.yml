@@ -1,0 +1,19 @@
+Description: >
+  This is a simple template for creating a vpc for demoing CloudFormation
+Resources:
+  MyTestVpc:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      Tags:
+        - Key: Name
+          Value: MyTestVpc
+
+Outputs:
+  MyTestVpc:
+    Description: MyTestVpc
+    Value: !Ref MyTestVpc
+    Export:
+      Name: MyTestVpc-ID
