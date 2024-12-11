@@ -16,6 +16,9 @@ model User {
   email   String  @unique
   name    String?
   address String?
+  selectedImage String?
+  ocrResult String?
+  imageBase64 String?
   posts   Post[]
 }
 
